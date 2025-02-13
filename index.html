@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Valentine!</title>
+    <link rel="shortcut icon" type="image/png" href="./img/heart.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        #login-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #loveDate {
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #ff1493;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .login-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background: #ff69b4;
+        }
+        #error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Màn hình đăng nhập vào tình yêu -->
+    <div id="login-screen">
+        <h2>💖 Hãy đăng nhập vào tình yêu của chúng mình 💖</h2>
+        <input type="text" id="loveDate" placeholder="Ngày yêu nhau" maxlength="10" oninput="formatDateInput(this)">
+        <button class="login-btn" id="replay" onclick="checkLoveDate()">Khám phá 💕</button>
+        <p id="error-message">Sai rồi, thử lại nhé! 🥺</p>
+    </div>
+
+    <!-- Trang chính (ẩn ban đầu) -->
+    <div id="main-content">
+        <div class="container">
+          <div class="one">
+            <h1 class="one">
+              Chào
+              <span id="name">Bông xinh của anh</span>
+            </h1>
+            <p class="two" id="greetingText">Anh thực sự thích tên đó!</p>
+          </div>
+            <div class="three">
+                <p>Hôm nay là Valentine rồi!!! 🎉</p>
+            </div>
+            <div class="four">
+                <div class="text-box">
+                    <p class="hbd-chatbox">Chúc mừng ngày Valentine! Yeee! Yêu thương và blabla...</p>
+                    <p class="fake-btn">Gửi</p>
+                </div>
+            </div>
+            <div class="five">
+                <p class="idea-1">Ban đầu anh cũng định làm vậy.</p>
+                <p class="idea-2">Nhưng rồi anh dừng lại.</p>
+                <p class="idea-3">Vì anh nhận ra, anh muốn làm một điều gì đó <strong>đặc biệt</strong>.</p>
+                <p class="idea-4">Bởi vì,</p>
+                <p class="idea-5">Em là người thật sự đặc biệt ❤️</p>
+                <p class="idea-6"><span>H</span><span>&</span><span>L</span></p>
+            </div>
+            <div class="six">
+              <img src="img/IMG_6571.jpg" alt="" class="girl-dp" id="imagePath" />
+              <div class="wish">
+                <h3 class="wish-hbd">Chúc mừng ngày Valentine, cô gái xinh đẹp!</h3>
+                <h5 id="wishText">Mãi luôn vui vẻ và hạnh phúc nhé!</h5>
+              </div>
+            </div>
+            <div class="seven">
+              <div class="baloons">
+                <img src="img/balloon.svg" alt="" />
+                <img src="img/smiling.svg" />
+                <img src="img/heart.svg" />
+                <img src="img/balloon.svg" alt="" />
+                <img src="img/heart.svg" />
+                <img src="img/music-note.svg" alt="" />
+                <img src="img/smiling.svg" />
+                <img src="img/heart.svg" />
+                <img src="img/balloon.svg" alt="" />
+                <img src="img/happy.svg" alt="" />
+                <img src="img/heart.svg" />
+                <img src="img/smiling.svg" />
+              </div>
+            </div>
+            <div class="eight">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" />
+              </svg>
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" />
+              </svg>
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" />
+              </svg>
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" />
+              </svg>
+            </div>
+            <div class="nine">
+                <p>Giờ thì quay lại và nói cho anh biết em có thích không nhé!</p>
+                <p id="replay">Hoặc nhấp vào đây nếu em muốn xem lại lần nữa.</p>
+                <p class="last-smile">🥰</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="text/babel" src="script/main.js"></script>
+</body>
+</html>
